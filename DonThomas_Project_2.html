@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .section{
+            margin: 49px 49px;
+        }
+    </style>
+    <!--Main div-->
+    <div id="mainDiv" style="border:1px black solid ;width: 1500px; height: 715px;margin: 50px 175px;background: bisque;">
+        <div id="idSection1" class="section" style="border:1px black solid ; background: antiquewhite;width: 400px; height:615px;float: left;">
+            <h2 style="text-align: center;">Video Device</h2>
+            <!--1ST DIV-->
+            <div id="id1" style="border:1px black solid ;text-align: center;padding-top: 5px; background: antiquewhite;   width: 300px; height: 385px; margin: 35px 47px 0px;">
+                <form>
+                    <label>Replacement Cost:</label><br>
+                    <input type="text" id="idCost"><br>
+                    <label >Supplier Name:</label><br>
+                    <input type="text" id="idName"><br>
+                    <label>Serial Number:</label><br>
+                    <input type="text" id="idNumber"><br>
+                    <label >Resolution</label><br>
+                    <input type="text" id="idResolution"><br>
+                    <label>Type:</label>
+                    <select id="idType">
+                        <option value="LCD">LCD</option>
+                        <option value="LED">LED</option>
+                        <option value="Plasma">Plasma</option>
+                        
+                      </select><br>
+                      
+
+                      
+                    
+                  </form>
+                  <button onclick="save1()" style="margin: 10px 0px;">Save</button><br>
+                  
+                  <!--
+                  <select id="idEnable1" onchange="changeEnable1(this.value)">
+                    <option value=true>Enable</option>
+                    <option value=false>Disable</option>
+                  </select>
+                  -->
+                  <input type="checkbox" id="idCheck1"  onclick="changeEnable1()" >
+                  <label > Enable</label><br>
+                  <p id="idC1" style="background: chocolate;color: white;"></p>
+            </div>
+            <button style="width: 70px; height: 25px; margin: 40px 161px 37px 47px;" onclick="previous1();">Previous</button>
+            <button style="width: 70px; height: 25px;" onclick="next1();">Next</button>
+            <button style="width: 70px; height: 25px; margin: 0px 161px 37px 47px;" onclick="new1()">New</button>
+            <button style="width: 70px; height: 25px;" onclick="updateB1()">Update</button>
+        </div>
+        <!--2ND DIV-->
+        <div id="idSection2" class="section" style="border:1px black solid ;background: antiquewhite; width: 400px; height: 615px;float: left;">
+            <h2 style="text-align: center;">Hard disk</h2>
+            <div id="id2" style="border:1px black solid ;background: antiquewhite; text-align: center;padding-top: 5px;   width: 300px; height: 385px; margin: 35px 47px 0px;">
+                <form>
+                    <label>Replacement Cost:</label><br>
+                    <input type="text" id="idCost2"><br>
+                    <label >Supplier Name:</label><br>
+                    <input type="text" id="idName2"><br>
+                    <label>Serial Number:</label><br>
+                    <input type="text" id="idNumber2"><br>
+                    <label >Size:</label><br>
+                    <input type="text" id="idSize2"><br>
+                    <label>Transfer Rate:</label><br>
+                    <input type="text" id="idTransfer2"><br>
+                    <label >Platter Size:</label><br>
+                    <input type="text" id="idPlatterSize2"><br>
+                    <label >Number of Platters:</label><br>
+                    <input type="text" id="idPlatterNo2"><br>
+                    
+                      
+                    
+                  </form>
+                  <button onclick="save2()" style="margin: 10px 0px;">Save</button><br>
+                  
+                  <!--
+                  <select id="idEnable2" onchange="changeEnable2()">
+                    <option value="true">Enable</option>
+                    <option value="false">Disable</option>
+                  </select>
+                  -->
+                  <input type="checkbox" id="idCheck2"  onclick="changeEnable2()" >
+                  <label > Enable</label><br>
+                  <p id="idC2" style="background: chocolate;color: white;"></p>
+            </div>
+            <button style="width: 70px; height: 25px; margin: 40px 161px 37px 47px;" onclick="previous2()">Previous</button>
+            <button style="width: 70px; height: 25px;" onclick="next2()">Next</button>
+            <button style="width: 70px; height: 25px; margin: 0px 161px 37px 47px;" onclick="new2()">New</button>
+            <button style="width: 70px; height: 25px;" onclick="updateB2()">Update</button>
+        </div>
+        <!--3RD DIV-->
+        <div id="idSection3" class="section" style="border:1px black solid ;background: antiquewhite; width: 400px; height: 615px;float: left;">
+            <h2 style="text-align: center;">SSD</h2>
+            <div id="id3" style="border:1px black solid ; text-align: center;padding-top: 5px;    width: 300px; height: 385px; margin: 35px 47px 0px;">
+                <form>
+                    <label>Replacement Cost:</label><br>
+                    <input type="text" id="idCost3"><br>
+                    <label >Supplier Name:</label><br>
+                    <input type="text" id="idName3"><br>
+                    <label>Serial Number:</label><br>
+                    <input type="text" id="idNumber3"><br>
+                    <label >Size:</label><br>
+                    <input type="text" id="idSize3"><br>
+                    <label>Transfer Rate:</label><br>
+                    <input type="text" id="idTransfer3"><br>
+                    <label>Type:</label>
+                    <select id="idType3" style="margin: 10px 0px;">
+                        <option value="Flash">Flash</option>
+                        <option value="DRAM">DRAM</option>
+                        
+                      </select><br>
+                      <label>Wear Boolean:</label>
+                      <select id="idWear3">
+                          <option value ="true">True</option>
+                          <option value="false">False</option>
+    
+                        </select><br>
+                       
+                      
+                    
+                  </form>
+                  
+                  
+                  <!--
+                  <select id="idEnable3" onchange="changeEnable3()">
+                    <option value=true>Enable</option>
+                    <option value=false>Disable</option>
+                  </select>
+                  -->
+                  <button onclick="save3()" style="margin: 10px 0px;">Save</button><br>
+                  <input type="checkbox" id="idCheck3"  onclick="changeEnable3()" >
+                  <label > Enable</label><br>
+                  <p id="idC3" style="background: chocolate;color: white;"></p>
+                  
+            </div>
+            <button style="width: 70px; height: 25px; margin: 40px 161px 37px 47px;" onclick="previous3()">Previous</button>
+            <button style="width: 70px; height: 25px;"onclick="next3()">Next</button>
+            <button style="width: 70px; height: 25px; margin: 0px 161px 37px 47px;" onclick="new3()">New</button>
+            <button style="width: 70px; height: 25px;" onclick="updateB3()">Update</button>
+        </div>
+    </div>
+    <script>
+        //main class
+        class device{
+            //constructor
+            constructor(status, cost, name, number){
+                this._status =status;
+                this._cost = cost;
+                this._name = name;
+                this._number =number;
+            }
+            //get 
+            get status(){
+                return this._status;
+            }
+            get cost(){
+                return this._cost;
+            }
+            get name(){
+                return this._name;
+            }
+            get number(){
+                return this._number;
+            }
+            //get alldata
+            get alldata(){
+                return "Name : " + this._name + " Serial Number : " + this._number
+                + " Repair cost : " + this._cost + " Status : " + this._status;
+            }
+        }
+
+
+        //VIDEO CLASS
+        class video extends device{
+            //constructor
+            constructor(status, cost, name, number,resolution,type){
+                super(status, cost, name, number);
+                this._resolution  = resolution;
+                this._type = type;
+            }
+            /*
+            get status(){
+                return this._status;
+            }
+            get cost(){
+                return this._cost;
+            }
+            get name(){
+                return this._name;
+            }
+            get number(){
+                return this._number;
+            }
+            */
+            get resolution(){
+                return this._resolution;
+            }
+            get type(){
+                return this._type;
+            }
+
+            get alldataV(){
+                return super.alldata + this._resolution
+                + " Type : " + this._type;
+            }
+        }
+        //class disk
+        class disk extends device{
+            constructor(status, cost, name, number, size, transfer){
+                super(status, cost, name, number);
+                this._size = size;
+                this._transfer = transfer;
+            }
+            //get
+            get size(){
+                return this._size;
+            }
+            get transfer(){
+                return this._transfer;
+            }
+            get alldataD(){
+                return super.alldata + " Size :"+ this._size+ " transfer: "+ this._transfer;
+            }
+        }
+
+        //HARDDISK CLASS
+        class hardDisk extends disk{
+            //constructor
+            constructor(status, cost, name, number, size, transfer, platterSize  ,noPlatter){
+                super(status, cost, name, number, size, transfer);
+                this._platterSize = platterSize;
+                this._noPlatter = noPlatter;
+            }
+            //get
+            get platterSize(){
+                return this._platterSize;
+            }
+            get noPlatter(){
+                return this._noPlatter;
+            }
+            get alldataH(){
+                return super.alldataD + "Platter Size : "+this._platterSize + " Number of Platter : "+ this._noPlatter;
+            }
+        }
+
+        //SSD CLASS
+        class ssdDisk extends disk{
+            //constructor
+            constructor(status, cost, name, number, size, transfer,type,leveling){
+                super(status, cost, name, number, size, transfer);
+                this._type = type;
+                this._leveling = leveling;
+            }
+            //get
+            get type(){
+                return this._type;
+            }
+            get leveling(){
+                return this._leveling;
+            }
+            get alldataS(){
+                return super.alldataD + this._type + this._leveling;
+            }
+        }
+        //array declartion
+        var aDeviceV = [];
+        var aDeviceH = [];
+        var aDeviceS = [];
+        //count for three classes
+        var count1 =0;
+        var count2 =0;
+        var count3 =0;
+        //new data update
+        var update1 = false;
+        var update2 = false;
+        var update3 = false;
+        //get status
+        var new1Status = false;
+        var new2Status = false;
+        var new3Status = false;
+        //value added to video
+        aDeviceV.push(new video(true,100, "Don", "ss0111","1200x100","LED"));
+        console.log(aDeviceV[0].alldataV);
+        console.log(aDeviceV[0].number);
+        aDeviceV.push(new video(false,200, "Thomas", "ss0112","2200x100","LCD"));
+        aDeviceV.push(new video(true,300, "Peter", "ss0113","200x100","LED"));
+        aDeviceV.push(new video(true,400, "Deepak", "ss0114","400x100","LCD"));
+        console.log(aDeviceV[1].alldataV);
+        //value added to harddisk
+        aDeviceH.push(new hardDisk(true,100, "Nikhil", "ss0141","10gb","1gb/sec","2 inch",6));
+        aDeviceH.push(new hardDisk(false,200, "Mathew", "ss0142","20gb","2gb/sec","2.5 inch",7));
+        aDeviceH.push(new hardDisk(true,300, "Alan", "ss0143","30gb","30gb/sec","3.5 inch",8));
+        aDeviceH.push(new hardDisk(true,400, "Baby", "ss0144","40gb","40gb/sec","4.5 inch",9));
+        console.log(aDeviceH[0].alldataH);
+        //value added to ssd
+        aDeviceS.push(new ssdDisk(true,100, "Jerin", "ss014451","12gb","1gb/sec","DRAM",false));
+        aDeviceS.push(new ssdDisk(false,200, "Eldho", "ss014452","20gb","2gb/sec","Flash",true));
+        aDeviceS.push(new ssdDisk(true,300, "John", "ss014453","300gb","3gb/sec","DRAM",false));
+        aDeviceS.push(new ssdDisk(true,400, "Shaju", "ss014454","400gb","4gb/sec","Flash",false));
+        console.log(aDeviceS[0].alldataS);
+        
+
+        console.log(aDeviceV[0].resolution);
+        //console.log(aDeviceV[count1].enableD1 + "here");
+        
+        //fn display 1
+        function display1(){
+            //get id
+            var costD1 = document.getElementById("idCost");
+            var nameD1 = document.getElementById("idName");
+            var numberD1 = document.getElementById("idNumber");
+            var resolutionD1 = document.getElementById("idResolution");
+            var typeD1 = document.getElementById("idType");
+            var enableD1 = document.getElementById("idEnable1");
+            var check1 = document.getElementById("idCheck1");
+            
+
+            //console.log(aDeviceV[count1].enableD1 + "here");
+            //add value to ids
+            costD1.value = aDeviceV[count1].cost;
+            nameD1.value = aDeviceV[count1].name;
+            numberD1.value = aDeviceV[count1].number;
+            resolutionD1.value = aDeviceV[count1].resolution;
+            typeD1.value = aDeviceV[count1].type;
+            //enableD1.value = aDeviceV[count1].status;
+            check1.checked = aDeviceV[count1].status;
+            console.log(check1.checked +" value "+aDeviceV[count1].status);
+            /*
+            console.log(check1.checked +" value "+aDeviceV[count1].status);
+            if(aDeviceV[count1].status == true){
+                check1.checked = true;
+            }
+            else
+            {
+                check1.checked = false;
+            }
+            
+            /*
+            for(var i=0;i<aDeviceV.length;i++)
+            {
+                console.log(aDeviceV[i].cost);
+            }
+            */
+            console.log(aDeviceV.length);
+            //console.log(aDeviceV[count1].status + "here");
+            
+            
+        }
+        //function call
+        display1();
+
+        //fn enable
+        function changeEnable1(){
+            
+            //var change1 = document.getElementById("idEnable1").value;
+            var change11 = document.getElementById("idCheck1").checked;
+            console.log("inside change" + change11);
+            //if condition for false
+            if(change11 == false){
+                console.log("here change");
+                document.getElementById("idCost").value ="";
+                document.getElementById("idName").value ="";
+                document.getElementById("idNumber").value ="";
+                document.getElementById("idResolution").value="";
+                document.getElementById("idType").value ="";
+                //aDeviceV[count1]._status = change1;
+                //console.log(aDeviceV[count1]._status);
+                document.getElementById("idC1").innerHTML="Disabled item";
+            }
+            else
+            {
+                document.getElementById("idCost").value = aDeviceV[count1]._cost;
+                document.getElementById("idName").value = aDeviceV[count1]._name;
+                document.getElementById("idNumber").value = aDeviceV[count1]._number;
+                document.getElementById("idResolution").value= aDeviceV[count1]._resolution;
+                document.getElementById("idType").value = aDeviceV[count1]._type;
+               
+                document.getElementById("idC1").innerHTML="";
+            }
+            aDeviceV[count1]._status = change11;
+            //aDeviceV[count1]._status = change11;
+            
+        }
+        //fn next
+        function next1(){
+            //increment
+            count1++; 
+            //condition  
+            if(count1 == aDeviceV.length)
+            {
+                count1 =0;
+            }
+            //fn calling
+            display1();
+            changeEnable1();
+            
+        }
+        //fn previous
+        function previous1(){
+            //decrement
+            count1--;
+            console.log(count1);
+            //condition
+            if(count1 < 0)
+            {
+                console.log(count1 +"hello");
+                count1 = aDeviceV.length-1;
+                console.log(count1 +"hello2");
+            }
+            //fn call
+            display1();
+            changeEnable1();
+        }
+        //fn update
+        function updateB1(){
+            update1 = true;
+            document.getElementById("idC1").innerHTML = "Click Save Button after entering Values";
+
+            
+        }
+        //fn save
+        function save1(){
+            //condition
+            if(update1 == true)
+            {
+                aDeviceV[count1]._cost = document.getElementById("idCost").value;
+                //console.log(aDeviceV[count1]._cost+" here "+ document.getElementById("idCost").value);
+                aDeviceV[count1]._name = document.getElementById("idName").value;
+                aDeviceV[count1]._number = document.getElementById("idNumber").value;
+                aDeviceV[count1]._resolution = document.getElementById("idResolution").value;
+                aDeviceV[count1]._type = document.getElementById("idType").value;
+                //aDeviceV[count1]._status = document.getElementById("idEnable1").value;
+                aDeviceV[count1]._status = document.getElementById("idCheck1").checked;
+
+                document.getElementById("idC1").innerHTML = "Values Updated";
+
+            }
+            else if(new1Status == true){
+                aDeviceV.push(new video(document.getElementById("idCheck1").checked,document.getElementById("idCost").value
+            , document.getElementById("idName").value, document.getElementById("idNumber").value
+            ,document.getElementById("idResolution").value,document.getElementById("idType").value));
+
+            document.getElementById("idC1").innerHTML = "Values Updated";
+            }
+            else
+            {
+                document.getElementById("idC1").innerHTML = "Check New or Update Button before Save";
+            }
+            update1 =false;new1Status= false;
+            
+        }
+        //fn new
+        function new1(){
+                document.getElementById("idC1").innerHTML = "Click Save Button after entering Values";
+                document.getElementById("idCost").value = "";
+                //console.log(aDeviceV[count1]._cost+" here "+ document.getElementById("idCost").value);
+                document.getElementById("idName").value = "";
+                document.getElementById("idNumber").value ="";
+                document.getElementById("idResolution").value ="";
+                document.getElementById("idType").value ="LCD";
+                //document.getElementById("idEnable1").value =true;
+                document.getElementById("idCheck1").checked = true;
+                //change the vlaue to true
+            new1Status = true;
+            
+
+        }
+
+
+        //display 2
+
+        function new2(){
+
+            new2Status =true;
+                document.getElementById("idC2").innerHTML = "Click Save Button after entering Values";
+                document.getElementById("idCost2").value ="";
+                //console.log(aDeviceH[count2]._cost+" here "+ document.getElementById("idCost").value);
+                document.getElementById("idName2").value ="";
+                document.getElementById("idNumber2").value ="";
+                document.getElementById("idSize2").value ="";
+                document.getElementById("idTransfer2").value ="";
+                document.getElementById("idPlatterSize2").value ="";
+                document.getElementById("idPlatterNo2").value ="";
+                //document.getElementById("idEnable2").value =true;
+                document.getElementById("idCheck2").checked = true;
+                
+        }
+        //fn update
+        function updateB2(){
+            update2 = true;
+            document.getElementById("idC2").innerHTML = "Click Save Button after entering Values";
+        }
+        //fn save
+        function save2(){
+            if(update2 == true){
+                console.log("save2");
+                aDeviceH[count2]._cost = document.getElementById("idCost2").value;
+                //console.log(aDeviceH[count2]._cost+" here "+ document.getElementById("idCost").value);
+                aDeviceH[count2]._name = document.getElementById("idName2").value;
+                aDeviceH[count2]._number = document.getElementById("idNumber2").value;
+                aDeviceH[count2]._size = document.getElementById("idSize2").value;
+                aDeviceH[count2]._transfer = document.getElementById("idTransfer2").value;
+                aDeviceH[count2]._platterSize = document.getElementById("idPlatterSize2").value;
+                aDeviceH[count2]._noPlatter = document.getElementById("idPlatterNo2").value;
+                //aDeviceH[count2]._status = document.getElementById("idEnable2").value;
+                aDeviceH[count2]._status = document.getElementById("idCheck2").checked;
+                console.log(aDeviceH);
+                document.getElementById("idC2").innerHTML = "Values Updated";
+            }else if(new2Status){
+                aDeviceH.push(new hardDisk(document.getElementById("idCheck2").checked,document.getElementById("idCost2").value
+                , document.getElementById("idName2").value, document.getElementById("idNumber2").value
+                ,document.getElementById("idSize2").value,document.getElementById("idTransfer2").value
+                ,document.getElementById("idPlatterSize2").value,document.getElementById("idPlatterNo2").value));
+
+                document.getElementById("idC2").innerHTML = "Values Updated";
+            }
+            else
+            {
+                document.getElementById("idC2").innerHTML = "Check New or Update Button before Save";
+            }
+            
+            //aDeviceH.push(new hardDisk(false,200, "2ive", "ss0142","120","2gb","2.5 inch",6));
+            update2 = false;new3Status =false;
+            
+        }
+        //fn display
+        function display2(){
+            var costD2 = document.getElementById("idCost2");
+            var nameD2 = document.getElementById("idName2");
+            var numberD2 = document.getElementById("idNumber2");
+            var sizeD2 = document.getElementById("idSize2");
+            var transferD2 = document.getElementById("idTransfer2");
+            var platterSizeD2 = document.getElementById("idPlatterSize2");
+            var platterNoD2 = document.getElementById("idPlatterNo2");
+            //var enableD2 = document.getElementById("idEnable2");
+            var check2 = document.getElementById("idCheck2");
+            
+            console.log(aDeviceH[count2].size +"hello2");
+            costD2.value = aDeviceH[count2].cost;
+            nameD2.value = aDeviceH[count2].name;
+            numberD2.value = aDeviceH[count2].number;
+            sizeD2.value = aDeviceH[count2].size;
+            transferD2.value = aDeviceH[count2].transfer;
+            platterSizeD2.value = aDeviceH[count2]._platterSize;
+            platterNoD2.value = aDeviceH[count2].noPlatter;
+            //enableD2.value = aDeviceH[count2].status;
+            check2.checked = aDeviceH[count2].status;
+            /*
+            for(var i=0;i<aDeviceV.length;i++)
+            {
+                console.log(aDeviceV[i].cost);
+            }
+            */
+            console.log(aDeviceH.length);
+            
+        }
+        //fn calling
+        display2();
+        //fn enable
+        function changeEnable2(){
+            //var change2 = document.getElementById("idEnable2").value;
+            var change22 = document.getElementById("idCheck2").checked;
+            console.log("here2" + change22);
+            if(change22 == false){
+                document.getElementById("idC2").innerHTML = "Disabled Item";
+                console.log("here change");
+                document.getElementById("idCost2").value ="";
+                document.getElementById("idName2").value ="";
+                document.getElementById("idNumber2").value ="";
+                document.getElementById("idSize2").value ="";
+                document.getElementById("idTransfer2").value ="";
+                document.getElementById("idPlatterSize2").value ="";
+                document.getElementById("idPlatterNo2").value ="";
+                
+                
+                //aDeviceV[count1]._status = "false";
+                //console.log(aDeviceV[count1]._status);
+            }
+            else
+            {
+                document.getElementById("idC2").innerHTML = "";
+                document.getElementById("idCost2").value = aDeviceH[count2]._cost;
+                document.getElementById("idName2").value = aDeviceH[count2]._name;
+                document.getElementById("idNumber2").value = aDeviceH[count2]._number;
+                document.getElementById("idSize2").value = aDeviceH[count2].size;;
+                document.getElementById("idTransfer2").value = aDeviceH[count2].transfer;
+                document.getElementById("idPlatterSize2").value = aDeviceH[count2]._platterSize;
+                document.getElementById("idPlatterNo2").value = aDeviceH[count2].noPlatter;
+                
+            }
+            aDeviceH[count2]._status = change22;
+            
+        }
+        //fn next
+        function next2(){
+            count2++;
+            if(count2 == aDeviceH.length)
+            {
+                count2 =0;
+            }
+            //fn calling
+            display2();
+            changeEnable2();
+
+        }
+        //fn previous
+        function previous2(){
+            count2--;
+            console.log(count2);
+            if(count2 < 0)
+            {
+                console.log(count2 +"hello");
+                count2 = aDeviceH.length-1;
+                console.log(count2 +"hello2");
+            }
+            //fn calling
+            display2();
+            changeEnable2();
+        }
+
+        //display 3
+
+        //fn new
+        function new3(){
+            new3Status = true;
+                document.getElementById("idC3").innerHTML = "Click Save Button after entering Values";
+                document.getElementById("idCost3").value ="";
+                document.getElementById("idName3").value ="";
+                document.getElementById("idNumber3").value ="";
+                document.getElementById("idSize3").value ="";
+                document.getElementById("idTransfer3").value ="";
+                document.getElementById("idType3").value ="Flash";
+                document.getElementById("idWear3").value =true;
+                //document.getElementById("idEnable3").value =true;
+                document.getElementById("idCheck3").checked =true;
+                
+
+        }
+        //fn enable
+        function changeEnable3(){
+            //var change3 = document.getElementById("idEnable3").value;
+            var change33 = document.getElementById("idCheck3").checked;
+            if(change33 == false){
+                document.getElementById("idC3").innerHTML = "Disabled Item";
+                console.log("here change");
+                document.getElementById("idCost3").value ="";
+                document.getElementById("idName3").value ="";
+                document.getElementById("idNumber3").value ="";
+                document.getElementById("idSize3").value ="";
+                document.getElementById("idTransfer3").value ="";
+                document.getElementById("idType3").value ="";
+                document.getElementById("idWear3").value = "";
+                
+                //aDeviceV[count1]._status = "false";
+                //console.log(aDeviceV[count1]._status);
+            }
+            else
+            {
+                document.getElementById("idC3").innerHTML = "";
+                document.getElementById("idCost3").value = aDeviceS[count3]._cost;
+                document.getElementById("idName3").value = aDeviceS[count3]._name;
+                document.getElementById("idNumber3").value = aDeviceS[count3]._number;
+                document.getElementById("idSize3").value = aDeviceS[count3].size;;
+                document.getElementById("idTransfer3").value = aDeviceS[count3]._transfer;
+                document.getElementById("idType3").value = aDeviceS[count3]._type;
+                document.getElementById("idWear3").value = aDeviceS[count3]._leveling;
+                
+            }
+            aDeviceS[count3]._status = change33;
+            
+        }
+        //fn update
+        function updateB3(){
+            update3 = true;
+            document.getElementById("idC3").innerHTML = "Click Save Button after entering Values";
+
+        }
+        //fn save
+        function save3(){
+            if(update3 == true){
+                aDeviceS[count3]._cost = document.getElementById("idCost3").value;
+                aDeviceS[count3]._name = document.getElementById("idName3").value;
+                aDeviceS[count3]._number = document.getElementById("idNumber3").value;
+                aDeviceS[count3]._size = document.getElementById("idSize3").value;
+                aDeviceS[count3]._transfer = document.getElementById("idTransfer3").value;
+                aDeviceS[count3]._type = document.getElementById("idType3").value;
+                aDeviceS[count3]._leveling = document.getElementById("idWear3").value;
+                //aDeviceS[count3]._status = document.getElementById("idEnable3").value;
+                aDeviceS[count3]._status = document.getElementById("idCheck3").checked;
+                //console.log(aDeviceS[count3]._status + " save 3"+document.getElementById("idEnable3").value );
+                console.log(document.getElementById("idWear3").value);
+
+                document.getElementById("idC3").innerHTML = "Values Updated";
+            }else if(new3Status == true){
+                aDeviceS.push(new ssdDisk(document.getElementById("idCheck3").checked,document.getElementById("idCost3").value
+                , document.getElementById("idName3").value, document.getElementById("idNumber3").value,
+                document.getElementById("idSize3").value,document.getElementById("idTransfer3").value
+                ,document.getElementById("idType3").value,document.getElementById("idWear3").value));
+
+                document.getElementById("idC3").innerHTML = "Values Updated";
+            }
+            else{
+                document.getElementById("idC3").innerHTML = "Check New or Update Button before Save";
+            }
+            update3 = false;new3Status =false;
+            
+        }
+        //fn display
+        function display3(){
+            var costD3 = document.getElementById("idCost3");
+            var nameD3 = document.getElementById("idName3");
+            var numberD3 = document.getElementById("idNumber3");
+            var sizeD3 = document.getElementById("idSize3");
+            var transferD3 = document.getElementById("idTransfer3");
+            var typeD3 = document.getElementById("idType3");
+            var wearD3 = document.getElementById("idWear3");
+            var enableD3 = document.getElementById("idEnable3");
+            var check3 = document.getElementById("idCheck3");
+            
+            console.log(aDeviceS[count3].size +"hello2");
+            costD3.value = aDeviceS[count3].cost;
+            nameD3.value = aDeviceS[count3].name;
+            numberD3.value = aDeviceS[count3].number;
+            sizeD3.value = aDeviceS[count3].size;
+            transferD3.value = aDeviceS[count3].transfer;
+            typeD3.value = aDeviceS[count3].type;
+            wearD3.value = aDeviceS[count3].leveling;
+            console.log(aDeviceS[count3].leveling);
+            //enableD3.value = aDeviceS[count3].status;
+            check3.checked = aDeviceS[count3].status;
+
+            //document.getElementById("idWear3").value = false;
+
+            /*
+            for(var i=0;i<aDeviceV.length;i++)
+            {
+                console.log(aDeviceV[i].cost);
+            }
+            */
+            console.log(aDeviceS.length);
+            
+        }
+        display3();
+        //fn next
+        function next3(){
+            count3++;
+            if(count3 == aDeviceS.length)
+            {
+                count3 =0;
+            }
+            display3();
+            changeEnable3()
+        }
+        //fn previous
+        function previous3(){
+            count3--;
+            console.log(count3);
+            if(count3 < 0)
+            {
+                console.log(count3 +"hello");
+                count3 = aDeviceS.length-1;
+                console.log(count3 +"hello2");
+            }
+            //fn calling
+            display3();
+            changeEnable3()
+        }
+    </script>
+</body>
+</html>
